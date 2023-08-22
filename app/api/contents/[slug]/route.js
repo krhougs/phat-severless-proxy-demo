@@ -46,6 +46,7 @@ export async function GET(request, { params }) {
 
   const content = outputJson.ok.ok
   const query = request.nextUrl.search
+  console.log("query", query)
 
   if (query === '?proxy' && isUri.isValid(content)) {
     try {
