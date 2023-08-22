@@ -57,6 +57,7 @@ export async function GET(request, { params }) {
         }
       )
     } catch (error) {
+      console.error(error)
       return new NextResponse(
         content,
         {
