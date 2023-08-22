@@ -48,7 +48,7 @@ export async function GET(request, { params }) {
   const query = request.nextUrl.search
   console.log("query", query)
 
-  if (query === '?proxy' && isUri.isValid(content)) {
+  if (query?.indexOf?.('?proxy') > -1 && isUri.isValid(content)) {
     try {
       const req = await fetch(content)
       return new NextResponse(
